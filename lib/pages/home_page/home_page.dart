@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_grocery_app/widgets/appbar/app_bar.dart';
 import 'package:flutter_grocery_app/pages/home_page/widgets/search_bar.dart';
 import 'package:flutter_grocery_app/widgets/reusable/product_card.dart';
+import 'package:flutter_grocery_app/widgets/reusable/product_price_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -83,6 +84,24 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ProductPriceCard(
+                    title: "Washing Liquid",
+                    price: 230,
+                    amount: 220,
+                    unit: "ml",
+                  ),
+                  ProductPriceCard(
+                    title: "Coffee and Tea",
+                    price: 30,
+                    amount: 100,
+                    unit: "g",
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
             ],
           ),
         ),
